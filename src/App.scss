@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.step {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  &-full {
+    grid-template-columns: none;
+  }
+
+  &__form {
+    padding: 40px;
+    width: 100%;
+    background-color: #6c63ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.form {
+  color: #3f3d56;
+  max-width: 600px;
+  padding: 2rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    text-align: start;
+    color: #6c63ff;
+    margin-bottom: 15px;
+  }
+
+  &__content,
+  &__item {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__content {
+    &-full {
+      flex-direction: row;
+      flex-wrap: wrap;
+      column-gap: 50px;
+    }
+  }
+
+  &__item {
+    margin-top: 10px;
+  }
+
+  &__label {
+    padding-left: 10px;
+    text-align: start;
+    margin-bottom: 10px;
+  }
+
+  &__input {
+    min-width: 200px;
+    font-size: 18px;
+    padding: 10px;
+    border-radius: 0.5rem;
+    border: 2px solid #f2f2f2;
+    outline: none;
+
+    &::placeholder {
+      font-size: 14px;
+    }
+
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: #6c63ff;
+    }
+
+    &-number {
+      -moz-appearance: textfield;
+
+      &::-webkit-outer-spin-button,
+      &::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+    }
+  }
+
+  &__error {
+    margin: 5px;
+    font-size: 10px;
+    color: tomato;
+    font-weight: 600;
+  }
+
+  &__action {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__btn {
+    cursor: pointer;
+    min-width: 100px;
+    margin-top: 20px;
+    border: none;
+    border-radius: 1rem;
+    padding: 15px;
+    color: #fff;
+    font-size: 16px;
+    font-weight: 600;
+    background-color: #6b63ffd2;
+    transition: 0.2s ease-in-out;
+
+    &:hover {
+      background-color: #6c63ff;
+    }
+
+    &:disabled {
+      background-color: #6b63ffab;
+    }
+  }
+}
+
+.subscription {
+  cursor: pointer;
+  padding: 20px;
+  border: 2px solid #f2f2f2;
+  border-radius: 1rem;
+
+  &:not(:last-child) {
+    margin-bottom: 10px;
+  }
+
+  &-active,
+  &:hover {
+    border: 2px solid #6c63ff;
+  }
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+
+  & > input {
+    width: 18px;
+    height: 18px;
+  }
+  &__title {
+    padding-left: 10px;
+  }
+}
+
+.not_found {
+  height: 100vh;
+}

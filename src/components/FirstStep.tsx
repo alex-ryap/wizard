@@ -41,7 +41,7 @@ export const FirstStep = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm({
-    mode: 'onBlur',
+    mode: 'onChange',
     resolver: yupResolver(validationSchema),
     defaultValues: {
       login,

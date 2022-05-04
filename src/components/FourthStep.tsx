@@ -27,13 +27,17 @@ export const FourthStep = () => {
     let { value } = event.target;
     value =
       value
-        .replace(/\s/g, '')
+        .replace(/\D/g, '')
         .match(/.{1,4}/g)
         ?.join(' ')
         .substr(0, 19) || '';
 
     setCardNumber(value);
-    if (value.length === 19) setIsValid(true);
+    if (value.length === 19) {
+      setIsValid(true);
+    } else {
+      setIsValid(false);
+    }
   };
 
   const handlerPrev = () => {

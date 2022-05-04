@@ -51,7 +51,7 @@ export const ThirdStep = () => {
     handleSubmit,
     formState: { errors, isValid },
   } = useForm({
-    mode: 'onBlur',
+    mode: 'onChange',
     resolver: yupResolver(validationScheme),
     defaultValues: {
       name,
